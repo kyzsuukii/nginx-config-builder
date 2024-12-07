@@ -1,0 +1,52 @@
+{
+  "name": "@dwikyrza/nginx-config-builder",
+  "version": "0.3.1",
+  "description": "A TypeScript library for building Nginx configuration files programmatically",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"examples/**/*.{ts,tsx}\"",
+    "lint": "eslint . --config eslint.config.mjs",
+    "lint:fix": "eslint . --config eslint.config.mjs --fix"
+  },
+  "keywords": [
+    "nginx",
+    "config",
+    "builder"
+  ],
+  "author": "Dwiky Rizky Ananditya",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.13.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyzsuukii/nginx-config-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kyzsuukii/nginx-config-builder/issues"
+  },
+  "homepage": "https://github.com/kyzsuukii/nginx-config-builder#readme"
+}
